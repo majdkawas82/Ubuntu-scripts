@@ -22,7 +22,7 @@ case "$OS" in
         
         apt-get update -y
         # Add your Ubuntu packages below:
-        apt-get install -y curl git htop
+        apt-get install -y network-manager bash-completion
         
         # Verification check
         if [ $? -eq 0 ]; then
@@ -41,7 +41,7 @@ case "$OS" in
         PKG_MANAGER=$(command -v dnf || command -v yum)
         
         # Add your CentOS packages below:
-        $PKG_MANAGER install -y curl git htop
+        $PKG_MANAGER install -y network-manager bash-completion
         
         # Verification check
         if [ $? -eq 0 ]; then
